@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Main {
 
@@ -5,6 +6,8 @@ public class Main {
 		// TODO Auto-generated method stub
 
 		PhoneBook pb = new PhoneBook();
+
+		Scanner sc = new Scanner(System.in);
 
 		// Search for "Violet Smith"
 		PhoneEntry entry = pb.search("Violet Smith");
@@ -15,6 +18,8 @@ public class Main {
 		} else {
 			System.out.println("Name not found");
 		}
+
+		sc.close();
 	}
 
 }
