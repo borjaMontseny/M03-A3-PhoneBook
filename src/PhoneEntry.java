@@ -11,4 +11,12 @@ public class PhoneEntry {
 		this.phone = phone;
 	}
 
+	public String getName() {
+		return name;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
 }

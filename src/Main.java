@@ -8,16 +8,25 @@ public class Main {
 		PhoneBook pb = new PhoneBook();
 
 		Scanner sc = new Scanner(System.in);
+		String targetName = " ";
+		PhoneEntry entry = null;
 
-		// Search for "Violet Smith"
-		PhoneEntry entry = pb.search("Violet Smith");
-
-		if (entry != null) {
-			System.out.println(entry.name + ": " + entry.phone);
-
-		} else {
-			System.out.println("Name not found");
+		while (!(targetName.equalsIgnoreCase("quit"))) {
+			System.out.print("Name: ");
+			targetName = sc.nextLine();
+			entry = pb.search(targetName);
+			
+			if (entry != null) {
+				System.out.println("The number is " + entry.getPhone() + "\n");
+			} else if (targetName.equalsIgnoreCase("quit")) {
+			} else {
+				System.out.println("Name not found\n");
+			}
 		}
+
+		System.out.println("Good Bye.");
+
+
 
 		sc.close();
 	}

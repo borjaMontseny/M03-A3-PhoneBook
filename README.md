@@ -19,9 +19,9 @@ Name: quit
 good-by
 ```
 
-Of course, the user must enter the name exactly for a match to be found. To make things a little easier, use the toUpperCase() method of class String to convert the target name and each array name to upper case when equality is being tested. Now the name the user enters need not match upper and lower case exactly.
+Of course, the user must enter the name exactly for a match to be found. To make things a little easier, use the **toUpperCase()** method of class **String** to convert the target name and each array name to upper case when equality is being tested. Now the name the user enters need not match upper and lower case exactly.
 
-Another improvement: rewrite the search() method to use just one return. You will need to rewrite new code in another classes and methods.
+Another improvement: rewrite the **search()** method to use just one return. You will need to rewrite new code in another classes and methods.
 
 This is the original version of the program:
 

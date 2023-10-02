@@ -15,7 +15,7 @@ public class PhoneBook {
 	PhoneEntry search(String targetName) {
 		PhoneEntry result = null;
 		for (int j = 0; j < phoneBook.length; j++) {
-			if (phoneBook[j].name.equals(targetName)) {
+			if (phoneBook[j].name.equalsIgnoreCase(targetName)) {
 				result = phoneBook[j];
 			}
 		}
