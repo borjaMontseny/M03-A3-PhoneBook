@@ -6,14 +6,25 @@ public class Main {
 		// TODO Auto-generated method stub
 
 		PhoneBook pb = new PhoneBook();
-
 		Scanner sc = new Scanner(System.in);
 		String targetName = " ";
 		PhoneEntry entry = null;
 
+		executeSearchProgram(pb, entry, targetName, sc);
+
+		sc.close();
+	}
+
+	public static String askTargetName(Scanner sc) {
+		System.out.print("Name: ");
+		String targetName = sc.nextLine();
+		return targetName;
+	}
+
+	public static void executeSearchProgram(PhoneBook pb, PhoneEntry entry, String targetName, Scanner sc) {
+
 		while (!(targetName.equalsIgnoreCase("quit"))) {
-			System.out.print("Name: ");
-			targetName = sc.nextLine();
+			targetName = askTargetName(sc);
 			entry = pb.search(targetName);
 
 			if (entry != null) {
@@ -25,7 +36,6 @@ public class Main {
 			}
 		}
 
-		sc.close();
 	}
 
 }
